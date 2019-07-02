@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<title>Tic Tac Toe</title>
+<head>
+    <title>Tic Tac Toe</title>
 
-<style>
-    table {
-        border-collapse: collapse;
-    }
+    <style>
+        table {
+            border-collapse: collapse;
+        }
 
-    td {
-        border: 1px solid black;
-        width: 150px;
-        height: 150px;
-        font-size: 30px;
-        text-align: center;
-    }
+        td {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            font-size: 30px;
+            text-align: center;
+        }
 
-    td>a {
-        font-size: 18px;
-    }
-</style>
-
+        td>a {
+            font-size: 18px;
+        }
+    </style>
+</head>
 <body>
 
     <table>
@@ -28,9 +29,9 @@
             {% for j in range(3) %}
             <td>
                 {% if game[i][j] %}
-                {{ game[i][j] }}
+                    {{ game[i][j] }}
                 {% else %}
-                <a href="{{ url_for('for',row=i,col=j)}}">Play {{ turn }} here.</a>
+                    <a href="{{ url_for('for',row=i,col=j)}}">Play {{ turn }} here.</a>
                 {% endif %}
             </td>
             {% endfor %}
